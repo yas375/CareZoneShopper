@@ -1,0 +1,1 @@
+../../MKFoundation/MKFoundation/Classes/MKFoundation/MKObject.h

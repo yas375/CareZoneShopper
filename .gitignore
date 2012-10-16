@@ -3,3 +3,6 @@ xcuserdata
 
 # Mac OS
 .DS_Store
+
+# Project specific
+CareZoneShopper/Credentials/CZSCredentials.m

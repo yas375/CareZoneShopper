@@ -12,17 +12,9 @@
 
 @implementation CZSNetworkTests
 
-
-- (void)setUp {
-    [super setUp];
-}
-
-- (void)tearDown {
-    [super tearDown];
-}
-
+// TODO: don't use the same instance of network engine (singleton) for all tests
 - (void)testThatNetworkEngineInitializedWithAuthHeader {
-    CZSNetworkEngine *engine = [CZSNetworkEngine sharedInstance];
+    CZSNetworkEngine *engine = [CZSNetworkEngine sharedEngine];
     MKNetworkOperation *op = [engine operationWithPath:@"arr"];
     STAssertEqualObjects([op.readonlyRequest.allHTTPHeaderFields objectForKey:@"X-CZ-Authorization"],
                          kCZSServerToken,
@@ -30,7 +22,7 @@
 }
 
 - (void)testThatNetworkEngineInitializedWithRightHostname {
-    CZSNetworkEngine *engine = [CZSNetworkEngine sharedInstance];
+    CZSNetworkEngine *engine = [CZSNetworkEngine sharedEngine];
     MKNetworkOperation *op = [engine operationWithPath:@"arr"];
     STAssertEqualObjects(op.readonlyRequest.URL.host,
                          kCZSServerHostName,

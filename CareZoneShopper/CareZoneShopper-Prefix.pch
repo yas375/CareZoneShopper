@@ -11,4 +11,9 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+    #import "NSManagedObject+MagicalFinders.h"
+    #import "NSManagedObject+MagicalRecord.h"
+    #import "NSManagedObjectContext+MagicalRecord.h"
+    #import "NSManagedObjectContext+MagicalSaves.h"
 #endif

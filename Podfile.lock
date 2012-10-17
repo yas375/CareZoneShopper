@@ -6,16 +6,16 @@ PODS:
   - KissXML
 - MKNetworkKit (HEAD based on 0.85):
   - Reachability (~> 3.0)
-- MagicalRecord (HEAD based on 2.0.6)
-- OHHTTPStubs (1.0.1)
+- MagicalRecord (HEAD based on 2.0.7)
 - Reachability (3.0.0)
+- SSPullToRefresh (HEAD based on 1.0.1)
 
 DEPENDENCIES:
 - MBProgressHUD (HEAD)
 - MKFoundation (from `https://raw.github.com/gist/660e130a5f891558506f/bb06f32586ba74f5913fc72fb73bfd89a5bcd03b/gistfile1.txt')
 - MKNetworkKit (HEAD)
 - MagicalRecord (HEAD)
-- OHHTTPStubs
+- SSPullToRefresh (HEAD)
 
 EXTERNAL SOURCES:
   MKFoundation:
@@ -26,8 +26,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: b23ee11c42253d6d804e8e0bfabdc334e8b2571f
   MKFoundation: 18c372cb2d009f933c88a8dec153887e199589fe
   MKNetworkKit: 300f34b9174c91d0abc6f78f0ceaa7ae9a96e4d1
-  MagicalRecord: 85329c97963b5ece0720c4d83ad95698cc36be48
+  MagicalRecord: f392c9e288e50653b3e7fbb6e797e0eba07344e7
   Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
-  OHHTTPStubs: 242a9292bfc8297fbecedb451e512badf285b8be
+  SSPullToRefresh: 135162e65f4a5ad008f970b48886572f6f711bba
 
 COCOAPODS: 0.15.1

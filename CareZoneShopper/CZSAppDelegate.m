@@ -7,16 +7,23 @@
 //
 
 #import "CZSAppDelegate.h"
+#import "MagicalRecord+Setup.h"
+
 
 @implementation CZSAppDelegate
 
 - (BOOL)application:(UIApplication *)application
         didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [MagicalRecord setupCoreDataStack];
     return YES;
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    [MagicalRecord cleanUp];
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [MagicalRecord cleanUp];
 }
 
 @end

@@ -8,8 +8,15 @@
 
 #import "MKNetworkEngine.h"
 
+#pragma mark - Responses
+typedef void (^CZSListResponseBlock)(NSArray *);
+
+
 @interface CZSNetworkEngine : MKNetworkEngine
 
-+ (id)sharedInstance;
++ (CZSNetworkEngine *)sharedEngine;
+
+- (MKNetworkOperation *)listOfItemsWithCompletion:(CZSListResponseBlock)completionBlock
+                                          onError:(MKNKErrorBlock)errorBlock;
 
 @end

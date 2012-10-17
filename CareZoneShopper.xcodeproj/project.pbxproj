@@ -25,6 +25,13 @@
 		501356DF162D6A2D00EAF667 /* CZSNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 501356DE162D6A2D00EAF667 /* CZSNetworkTests.m */; };
 		501356E3162D6BBF00EAF667 /* CZSCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 501356E2162D6BBF00EAF667 /* CZSCredentials.m */; };
 		501356E4162D6BBF00EAF667 /* CZSCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 501356E2162D6BBF00EAF667 /* CZSCredentials.m */; };
+		50D1F409162F101A00F1E67C /* CZSBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D1F408162F101A00F1E67C /* CZSBusiness.m */; };
+		50D1F40A162F114600F1E67C /* CZSBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D1F408162F101A00F1E67C /* CZSBusiness.m */; };
+		50D1F40F162F129800F1E67C /* CZSItemsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D1F40E162F129800F1E67C /* CZSItemsListViewController.m */; };
+		50D1F411162F12BD00F1E67C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D1F410162F12BD00F1E67C /* Storyboard.storyboard */; };
+		50D1F419162F141F00F1E67C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50D1F417162F141F00F1E67C /* DataModel.xcdatamodeld */; };
+		50D1F420162F195500F1E67C /* CZSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D1F41F162F195500F1E67C /* CZSItem.m */; };
+		50D1F424162F1AA800F1E67C /* CZSEditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D1F423162F1AA800F1E67C /* CZSEditItemViewController.m */; };
 		5A8F84362D204CC8B9D1962E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B89DF0B3F804E7EA0535163 /* libPods.a */; };
 		C760532E48D548F4AD2C852A /* libPods-CareZoneShopperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 493A9598679E4946A7A6A7B2 /* libPods-CareZoneShopperTests.a */; };
 /* End PBXBuildFile section */
@@ -64,6 +71,17 @@
 		501356DE162D6A2D00EAF667 /* CZSNetworkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSNetworkTests.m; sourceTree = "<group>"; };
 		501356E1162D6BBF00EAF667 /* CZSCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSCredentials.h; sourceTree = "<group>"; };
 		501356E2162D6BBF00EAF667 /* CZSCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSCredentials.m; sourceTree = "<group>"; };
+		50D1F407162F101A00F1E67C /* CZSBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSBusiness.h; sourceTree = "<group>"; };
+		50D1F408162F101A00F1E67C /* CZSBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSBusiness.m; sourceTree = "<group>"; };
+		50D1F40D162F129800F1E67C /* CZSItemsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSItemsListViewController.h; sourceTree = "<group>"; };
+		50D1F40E162F129800F1E67C /* CZSItemsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSItemsListViewController.m; sourceTree = "<group>"; };
+		50D1F410162F12BD00F1E67C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		50D1F418162F141F00F1E67C /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		50D1F41A162F143300F1E67C /* 1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.xcdatamodel; sourceTree = "<group>"; };
+		50D1F41E162F195500F1E67C /* CZSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSItem.h; sourceTree = "<group>"; };
+		50D1F41F162F195500F1E67C /* CZSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSItem.m; sourceTree = "<group>"; };
+		50D1F422162F1AA800F1E67C /* CZSEditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSEditItemViewController.h; sourceTree = "<group>"; };
+		50D1F423162F1AA800F1E67C /* CZSEditItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSEditItemViewController.m; sourceTree = "<group>"; };
 		7B89DF0B3F804E7EA0535163 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA9D616B59B461986153203 /* Pods-CareZoneShopperTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareZoneShopperTests.xcconfig"; path = "Pods/Pods-CareZoneShopperTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		F630D05F527C4E809D4504B6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -132,11 +150,16 @@
 		5013567F162D5FD800EAF667 /* CareZoneShopper */ = {
 			isa = PBXGroup;
 			children = (
+				50D1F412162F135700F1E67C /* Models */,
+				50D1F40B162F123C00F1E67C /* ViewControllers */,
+				50D1F405162F100100F1E67C /* Business */,
 				501356E0162D6BA300EAF667 /* Credentials */,
 				501356D5162D69B100EAF667 /* Network */,
 				50135688162D5FD800EAF667 /* CZSAppDelegate.h */,
 				50135689162D5FD900EAF667 /* CZSAppDelegate.m */,
 				50135680162D5FD800EAF667 /* Supporting Files */,
+				50D1F410162F12BD00F1E67C /* Storyboard.storyboard */,
+				50D1F417162F141F00F1E67C /* DataModel.xcdatamodeld */,
 			);
 			path = CareZoneShopper;
 			sourceTree = "<group>";
@@ -198,6 +221,59 @@
 				501356E2162D6BBF00EAF667 /* CZSCredentials.m */,
 			);
 			path = Credentials;
+			sourceTree = "<group>";
+		};
+		50D1F405162F100100F1E67C /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				50D1F407162F101A00F1E67C /* CZSBusiness.h */,
+				50D1F408162F101A00F1E67C /* CZSBusiness.m */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		50D1F40B162F123C00F1E67C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				50D1F421162F1A9000F1E67C /* EditItem */,
+				50D1F40C162F127600F1E67C /* ItemsList */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		50D1F40C162F127600F1E67C /* ItemsList */ = {
+			isa = PBXGroup;
+			children = (
+				50D1F40D162F129800F1E67C /* CZSItemsListViewController.h */,
+				50D1F40E162F129800F1E67C /* CZSItemsListViewController.m */,
+			);
+			path = ItemsList;
+			sourceTree = "<group>";
+		};
+		50D1F412162F135700F1E67C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50D1F413162F135700F1E67C /* Item */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50D1F413162F135700F1E67C /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				50D1F41E162F195500F1E67C /* CZSItem.h */,
+				50D1F41F162F195500F1E67C /* CZSItem.m */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		50D1F421162F1A9000F1E67C /* EditItem */ = {
+			isa = PBXGroup;
+			children = (
+				50D1F422162F1AA800F1E67C /* CZSEditItemViewController.h */,
+				50D1F423162F1AA800F1E67C /* CZSEditItemViewController.m */,
+			);
+			path = EditItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +354,7 @@
 				5013568C162D5FD900EAF667 /* Default.png in Resources */,
 				5013568E162D5FD900EAF667 /* Default@2x.png in Resources */,
 				50135690162D5FD900EAF667 /* Default-568h@2x.png in Resources */,
+				50D1F411162F12BD00F1E67C /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +421,11 @@
 				5013568A162D5FD900EAF667 /* CZSAppDelegate.m in Sources */,
 				501356D8162D69B100EAF667 /* CZSNetworkEngine.m in Sources */,
 				501356E3162D6BBF00EAF667 /* CZSCredentials.m in Sources */,
+				50D1F409162F101A00F1E67C /* CZSBusiness.m in Sources */,
+				50D1F40F162F129800F1E67C /* CZSItemsListViewController.m in Sources */,
+				50D1F419162F141F00F1E67C /* DataModel.xcdatamodeld in Sources */,
+				50D1F420162F195500F1E67C /* CZSItem.m in Sources */,
+				50D1F424162F1AA800F1E67C /* CZSEditItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +436,7 @@
 				501356D9162D69B100EAF667 /* CZSNetworkEngine.m in Sources */,
 				501356DF162D6A2D00EAF667 /* CZSNetworkTests.m in Sources */,
 				501356E4162D6BBF00EAF667 /* CZSCredentials.m in Sources */,
+				50D1F40A162F114600F1E67C /* CZSBusiness.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +611,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		50D1F417162F141F00F1E67C /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				50D1F41A162F143300F1E67C /* 1.xcdatamodel */,
+				50D1F418162F141F00F1E67C /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 50D1F41A162F143300F1E67C /* 1.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5013566C162D5FD800EAF667 /* Project object */;
 }

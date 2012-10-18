@@ -77,7 +77,7 @@
 		50D1F40E162F129800F1E67C /* CZSItemsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSItemsListViewController.m; sourceTree = "<group>"; };
 		50D1F410162F12BD00F1E67C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		50D1F418162F141F00F1E67C /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		50D1F41A162F143300F1E67C /* 1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.xcdatamodel; sourceTree = "<group>"; };
+		50D1F41A162F143300F1E67C /* 1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.xcdatamodel; sourceTree = "<group>"; };
 		50D1F41E162F195500F1E67C /* CZSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSItem.h; sourceTree = "<group>"; };
 		50D1F41F162F195500F1E67C /* CZSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSItem.m; sourceTree = "<group>"; };
 		50D1F422162F1AA800F1E67C /* CZSEditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSEditItemViewController.h; sourceTree = "<group>"; };
@@ -150,16 +150,16 @@
 		5013567F162D5FD800EAF667 /* CareZoneShopper */ = {
 			isa = PBXGroup;
 			children = (
-				50D1F412162F135700F1E67C /* Models */,
-				50D1F40B162F123C00F1E67C /* ViewControllers */,
 				50D1F405162F100100F1E67C /* Business */,
 				501356E0162D6BA300EAF667 /* Credentials */,
-				501356D5162D69B100EAF667 /* Network */,
 				50135688162D5FD800EAF667 /* CZSAppDelegate.h */,
 				50135689162D5FD900EAF667 /* CZSAppDelegate.m */,
-				50135680162D5FD800EAF667 /* Supporting Files */,
-				50D1F410162F12BD00F1E67C /* Storyboard.storyboard */,
 				50D1F417162F141F00F1E67C /* DataModel.xcdatamodeld */,
+				50D1F412162F135700F1E67C /* Models */,
+				501356D5162D69B100EAF667 /* Network */,
+				50D1F410162F12BD00F1E67C /* Storyboard.storyboard */,
+				50135680162D5FD800EAF667 /* Supporting Files */,
+				50D1F40B162F123C00F1E67C /* ViewControllers */,
 			);
 			path = CareZoneShopper;
 			sourceTree = "<group>";

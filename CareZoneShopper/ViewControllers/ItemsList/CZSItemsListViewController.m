@@ -38,12 +38,12 @@ static NSString *const kEditItemSegue = @"kEditItemSegue";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.tableView delegate:self];
-
     [self reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self reloadData];
     NSIndexPath *selected = [self.tableView indexPathForSelectedRow];
     if (selected) {
         [self.tableView deselectRowAtIndexPath:selected animated:YES];
@@ -54,6 +54,11 @@ static NSString *const kEditItemSegue = @"kEditItemSegue";
     [super viewWillDisappear:animated];
     [self.operation cancel];
     self.operation = nil;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.pullToRefreshView finishLoading];
 }
 
 #pragma mark -
@@ -75,8 +80,6 @@ static NSString *const kEditItemSegue = @"kEditItemSegue";
 }
 
 - (void)reloadData {
-    [self.pullToRefreshView startLoading];
-
     [self.operation cancel];
     __weak CZSItemsListViewController *weakSelf = self;
     self.operation = [[CZSNetworkEngine sharedEngine] listOfItemsWithCompletion:^(NSArray *items) {
@@ -101,9 +104,16 @@ static NSString *const kEditItemSegue = @"kEditItemSegue";
     }];
 }
 
+#pragma mark - Actions
+
+- (IBAction)addTapped:(id)sender {
+    [self performSegueWithIdentifier:kEditItemSegue sender:nil];
+}
+
 #pragma mark - SSPullToRefreshViewDelegate
 
 - (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
+    [self.pullToRefreshView startLoading];
     [self reloadData];
 }
 

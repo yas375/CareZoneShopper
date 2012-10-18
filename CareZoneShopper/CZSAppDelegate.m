@@ -22,8 +22,4 @@
     [MagicalRecord cleanUp];
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    [MagicalRecord cleanUp];
-}
-
 @end

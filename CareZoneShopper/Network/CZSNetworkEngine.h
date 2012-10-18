@@ -33,4 +33,8 @@ typedef void (^CZSItemResponseBlock)(NSDictionary *item);
                       onCompletion:(CZSItemResponseBlock)completionBlock
                            onError:(MKNKErrorBlock)errorBlock;
 
+- (MKNetworkOperation *)deleteItem:(CZSItem *)item
+                      onCompletion:(MKNKResponseBlock)completionBlock
+                           onError:(MKNKErrorBlock)errorBlock;
+
 @end

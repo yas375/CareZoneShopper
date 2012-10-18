@@ -12,6 +12,7 @@
 #import "CZSNetworkEngine.h"
 
 @interface CZSEditItemViewController () <UITextFieldDelegate> {
+    __weak IBOutlet UIButton *__deleteButton;
     __weak IBOutlet UITextField *__nameField;
     __weak IBOutlet UITextField *__categoryField;
     __weak IBOutlet UIBarButtonItem *__titleBarItem;
@@ -32,10 +33,14 @@
     [super viewWillAppear:animated];
     if (self.item) { // edit
         __titleBarItem.title = NSLocalizedString(@"Edit", @"title in the top toolbar");
+        __deleteButton.hidden = NO;
         __nameField.text = self.item.name;
         __categoryField.text = self.item.category;
     } else { // new
         __titleBarItem.title = NSLocalizedString(@"New", @"title in the top toolbar");
+        __deleteButton.hidden = YES;
+        __nameField.text = @"";
+        __categoryField.text = @"";
     }
 }
 
@@ -74,9 +79,13 @@
                                   [strongSelf dismissViewControllerAnimated:YES completion:nil];
                               }
                           } onError:^(NSError *error) {
+                              CZSEditItemViewController *strongSelf = weakSelf;
+                              if (strongSelf) {
+                                  [MBProgressHUD hideAllHUDsForView:strongSelf.view
+                                                           animated:YES];
+                              }
                               [UIAlertView showWithError:error];
                           }];
-
     } else {
         self.operation = [[CZSNetworkEngine sharedEngine] createNewItemWithName:__nameField.text
                                                                        category:__categoryField.text
@@ -87,6 +96,11 @@
                                   [strongSelf dismissViewControllerAnimated:YES completion:nil];
                               }
                           } onError:^(NSError *error) {
+                              CZSEditItemViewController *strongSelf = weakSelf;
+                              if (strongSelf) {
+                                  [MBProgressHUD hideAllHUDsForView:strongSelf.view
+                                                           animated:YES];
+                              }
                               [UIAlertView showWithError:error];
                           }];
     }
@@ -96,6 +110,28 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)deleteTapped:(id)sender {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.dimBackground = YES;
+    [self.operation cancel];
+    __weak CZSEditItemViewController *weakSelf = self;
+
+    self.operation = [[CZSNetworkEngine sharedEngine] deleteItem:self.item
+                                                    onCompletion:^(MKNetworkOperation *completedOperation)
+                      {
+                          CZSEditItemViewController *strongSelf = weakSelf;
+                          if (strongSelf) {
+                              [strongSelf dismissViewControllerAnimated:YES completion:nil];
+                          }
+                      } onError:^(NSError *error) {
+                          CZSEditItemViewController *strongSelf = weakSelf;
+                          if (strongSelf) {
+                              [MBProgressHUD hideAllHUDsForView:strongSelf.view
+                                                       animated:YES];
+                          }
+                          [UIAlertView showWithError:error];
+                      }];
+}
 
 #pragma mark - UITextFieldDelegate
 

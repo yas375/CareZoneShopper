@@ -110,12 +110,29 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oMY-Gj-rkE">
+                                <rect key="frame" x="20" y="252" width="280" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.67843137249999996" green="0.047058823530000002" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Delete item">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="WVi-7P-33d" eventType="touchUpInside" id="PjO-Os-8Ym"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="e6z-9l-WoU"/>
                     <connections>
                         <outlet property="__categoryField" destination="gcr-bu-c8g" id="mKV-C2-Q5j"/>
+                        <outlet property="__deleteButton" destination="oMY-Gj-rkE" id="cdi-dZ-NfO"/>
                         <outlet property="__nameField" destination="Ay0-1A-3Y3" id="Yol-Vh-kfu"/>
                         <outlet property="__titleBarItem" destination="m5l-sb-EDd" id="4H2-yM-ufd"/>
                     </connections>
@@ -143,25 +160,6 @@
             <point key="canvasLocation" x="-58" y="-86"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CZSEditItemViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CZSEditItemViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelTapped:"/>
-                <relationship kind="action" name="saveTapped:"/>
-                <relationship kind="outlet" name="__categoryField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="__nameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="__titleBarItem" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="CZSItemsListViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CZSItemsListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addTapped:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -16,6 +16,7 @@ static NSString *const kCZSAuthHeader = @"X-CZ-Authorization";
 static NSString *const kCZSHTTPMethodGet = @"GET";
 static NSString *const kCZSHTTPMethodPost = @"POST";
 static NSString *const kCZSHTTPMethodPut = @"PUT";
+static NSString *const kCZSHTTPMethodDelete = @"DELETE";
 
 static NSString *const kCZSItemsPath = @"items.json";
 #define ITEM_PATH(__C1__) [NSString stringWithFormat:@"items/%d.json", __C1__]
@@ -61,6 +62,7 @@ static NSString *const kCZSItemsPath = @"items.json";
     [self enqueueOperation:op];
     return op;
 }
+
 // TODO: handle errors from the server
 - (MKNetworkOperation *)updateItem:(CZSItem *)item
                           withName:(NSString *)name
@@ -80,5 +82,19 @@ static NSString *const kCZSItemsPath = @"items.json";
     [self enqueueOperation:op];
     return op;
 }
+
+// TODO: handle errors from the server
+- (MKNetworkOperation *)deleteItem:(CZSItem *)item
+                      onCompletion:(MKNKResponseBlock)completionBlock
+                           onError:(MKNKErrorBlock)errorBlock {
+    MKNetworkOperation *op = [self operationWithPath:ITEM_PATH([item.itemID intValue])
+                                              params:nil
+                                          httpMethod:kCZSHTTPMethodDelete];
+    [op onCompletion:completionBlock onError:errorBlock];
+    [self enqueueOperation:op];
+    return op;
+
+}
+
 
 @end
